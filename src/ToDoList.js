@@ -2,7 +2,7 @@ export default function TodoList({ todos, deleter }) {
   const todoList = todos.length ? (
     todos.map((todo) => (
       <div key={todo.id}>
-        <span onClick={deleter(todo.id)}>{todo.content}</span>
+        <span onClick={() => deleter(todo.id)}>{todo.content}</span>
       </div>
     ))
   ) : (
